@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Exam Hall finder!</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+</head>
+
+<body>
+
+    <!--Header start-->
+    <header id="header" class="header d-flex align-items-center">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo d-flex align-items-center">
+                <img src="assets/img/logo.jpg" alt="">
+                <h1>Rajnandini Kalane's Project <span>.</span></h1>
+            </a>
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a href="admin-login.html">Login as Admin</a></li>
+                </ul>
+            </nav>
+            <!-- .navbar -->
+            <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+            <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+        </div>
+    </header>
+    <!-- End Header -->
+
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="hero">
+        <div class="container position-relative">
+            <div class="row gy-5" data-aos="fade-in">
+                <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
+                    <h2>Search your exam <span>Hall </span>Here!</h2>
+                    <p>Just enter your Roll number and there you go! you will get your Exam Hall number 😊
+                    </p>
+                    <div class="d-flex justify-content-center justify-content-lg-start">
+                        <a href="#display" onclick="showDisplay();" class="btn-get-started">Click Here</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-1 order- lg-2">
+                    <img src="assets/img/hero-img.svg" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="100">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Hero Section END-->
+
+
+    <!--Search form section-->
+    <section id="display" class="search-box">
+        <div class="container" data-aos="fade-up">
+            <div class="section-header">
+                <h2>Search here</h2>
+            </div>
+            <div class="custom my-5">
+                <h3 class="mb-5 text-center">Just need your Roll number here ⬇️</h3>
+                <form class="example d-flex" style="margin:auto;max-width:300px">
+                    <input type="text" id="myInput" placeholder="Enter Your Seat No : " title="Type in a name" />
+                    <a href="#display-table" style="text-decoration: none; color: white;">
+                        <button onclick="show()" type="button">
+              <i class="fa fa-search width-100"></i>
+            </button>
+                    </a>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!--Search form section End-->
+
+
+    <!--Dispaly table section-->
+    <section class="result fade-in-left" id="display-table">
+        <div class="container text-center">
+            <h3>===== HERE ARE YOUR DETAILS =====</h3>
+        </div>
+        <table class="table table-light container">
+            <tbody>
+                <tr>
+                    <th scope="row">Seat No</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">Name</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">Course</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">Paper Title</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">Date</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">Time</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">Hall No.</th>
+                    <td class="bg-dark text-light"></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--Display table section End-->
+
+
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        //logic to hide search box
+
+        document.getElementById('display').style.display = 'none';
+
+        function showDisplay() {
+            document.getElementById('display').style.display = 'block';
+        }
+
+
+        //Logic to fetch data and display to the screen
+        document.getElementById('display-table').style.display = 'none';
+
+        function show() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            const Data = localStorage.getItem('excelData');
+            const parsedData = JSON.parse(Data);
+            var temp = false;
+            for (let i = 0; i < parsedData.length; i++) {
+                if (filter == parsedData[i].SeatNo) {
+                    temp = true;
+                    document.getElementsByTagName('td')[0].innerHTML = parsedData[i].SeatNo;
+                    document.getElementsByTagName('td')[1].innerHTML = parsedData[i].StudentName;
+                    document.getElementsByTagName('td')[2].innerHTML = parsedData[i].Course;
+                    document.getElementsByTagName('td')[3].innerHTML = parsedData[i].PaperTitle;
+                    document.getElementsByTagName('td')[4].innerHTML = parsedData[i].Date;
+                    document.getElementsByTagName('td')[5].innerHTML = parsedData[i].Time;
+                    document.getElementsByTagName('td')[6].innerHTML = parsedData[i].HallNo;
+                    document.getElementById('display-table').style.display = 'block';
+                }
+            }
+            if (temp == false) {
+                alert('Please enter valid roll number');
+            }
+
+
+        }
+    </script>
+
+</body>
+
+</html>
